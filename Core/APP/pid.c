@@ -8,7 +8,7 @@
 #include "motor_chassis.h"
 
 
-/////////µÈ´ýÊµÎïµ÷ÊÔPID²ÎÊý/////////
+/////////ÂµÃˆÂ´Ã½ÃŠÂµÃŽÃ¯ÂµÃ·ÃŠÃ”PIDÂ²ÃŽÃŠÃ½/////////
 
 #define KP 1.0f
 #define KI 1.0f
@@ -58,6 +58,6 @@ void pid_cal(void)
         pid_error_last[i] = pid_error_current[i];
 
 
-        motor_final_output_set((uint16_t)pid_term[i], i);
+        motor_final_output_set(ï¼ˆfabsï¼‰(uint16_t)pid_term[i], i);
     }
 }
